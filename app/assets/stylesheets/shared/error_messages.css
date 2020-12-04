@@ -1,0 +1,9 @@
+.error-alert {
+  display: flex;
+  margin-bottom: 3vh;
+}
+
+.error-message {
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
