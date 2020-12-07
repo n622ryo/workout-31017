@@ -1,0 +1,25 @@
+<%= form_with(model: @training, local: true) do |f|%>
+  <div class="field">
+    <%= f.label :title, "トレーニングの目的" %><br />
+    <%= f.text_field :title, placeholder:"例）腕を大きくしたい！", class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trainingtime_id, "トレーニングの合計時間" %><br />
+    <%= f.collection_select(:trainingtime_id, Trainingtime.all, :id, :name, {}, {class:"time-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :part_id, "トレーニングの部位" %><br />
+    <%= f.collection_select(:part_id, Part.all, :id, :name, {}, {class:"part-select"}) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :event, "トレーニングの種目" %><br />
+    <%= f.text_field :event, placeholder:"例）アームカール", class: :form__text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
