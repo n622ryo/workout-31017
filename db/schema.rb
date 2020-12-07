@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_161626) do
 
   create_table "trainings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "time_id", null: false
+    t.integer "trainingtime_id", null: false
     t.integer "part_id", null: false
     t.string "event", null: false
     t.bigint "user_id"
