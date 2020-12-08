@@ -1,7 +1,7 @@
 <%= form_with(model: @training, local: true) do |f|%>
   <div class="field">
     <%= f.label :title, "トレーニングの目的" %><br />
-    <%= f.text_field :title, placeholder:"例）腕を大きくしたい！", class: :form__text %>
+    <%= f.text_area :title, placeholder:"例）腕を太くしたい！", class: :form__text %>
   </div>
 
   <div class="field">
@@ -16,7 +16,7 @@
 
   <div class="field">
     <%= f.label :event, "トレーニングの種目" %><br />
-    <%= f.text_field :event, placeholder:"例）アームカール", class: :form__text %>
+    <%= f.text_area :event, placeholder:"例）アームカール（重りを持ち、腕を曲げる動作のトレーニングの事）", class: :form__text %>
   </div>
 
   <div class="actions">
