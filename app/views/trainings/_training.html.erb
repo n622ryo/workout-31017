@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card__body">
+    <%# トレーニングの目的 %>
+    <%= link_to training.title, root_path, class: :card__title%>
+    <p class="card__summary">
+      <%# トレーニングの合計時間 %>
+      <%= training.trainingtime.name %>
+    </p>
+    <p class="card__summary">
+      <%# トレーニングの部位 %>
+      <%= training.part.name %>
+    </p>
+    <p class="card__summary">
+      <%# トレーニングの種目 %>
+      <%= training.event %>
+    </p>
+    <%= link_to "by #{training.user.name}", root_path, class: :card__user %>
+  </div>
+</div>

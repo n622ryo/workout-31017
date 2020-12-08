@@ -1,0 +1,16 @@
+class Training < ApplicationRecord
+    #userとのアソシエーション
+  belongs_to :user
+
+    #ActiveHashとのアソシエーション
+    extend ActiveHash::Associations::ActiveRecordExtensions
+    belongs_to :trainingtime
+    belongs_to :part
+
+    with_options presence: true do
+      with_options numericality: { other_than: 0 } do
+        validates :trainingtime_id
+        validates :part_id
+      end
+    end
+end
