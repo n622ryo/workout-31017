@@ -141,7 +141,7 @@ a {
   margin-bottom: 28px;
 }
 .card__wrapper {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -150,6 +150,7 @@ a {
 .card {
   width: calc((100% - 50px) / 3);
   margin-bottom: 40px;
+
 }
 .card__img {
   margin-bottom: 16px;
