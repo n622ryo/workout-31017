@@ -16,6 +16,10 @@ class TrainingsController < ApplicationController
     end
   end
 
+  def show
+    @training = Training.find(params[:id])
+  end
+
   private
   def training_params
     params.require(:training).permit(:title, :trainingtime_id, :part_id, :event).merge(user_id: current_user.id)
