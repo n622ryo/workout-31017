@@ -1,0 +1,63 @@
+<main class="main">
+  <div class="inner">
+    <div class="training__wrapper">
+      <p class="training__hedding">
+        <div class="training__detail">
+          <p class="detail__title">トレーニングの目的</p>
+          <p class="detail__message">
+            <%= @training.title %>
+          </p>
+        </div>
+      </p>
+      <%# //ユーザー名 %>
+      <%= link_to @training.user.name, root_path, class: :training__user %>
+      <% if user_signed_in? && current_user.id == @training.user_id %>
+        <div class="training__manage">
+          <%= link_to "編集する", root_path, class: :training__btn %>
+          <%= link_to "削除する", root_path, class: :training__btn %>
+        </div>
+      <% end %>
+      <div class="training__body">
+        <div class="training__detail">
+          <p class="detail__title">トレーニングの合計時間</p>
+          <p class="detail__message">
+            <%= @training.trainingtime.name %>
+          </p>
+        </div>
+        <div class="training__detail">
+          <p class="detail__title">トレーニングの部位</p>
+          <p class="detail__message">
+            <%= @training.part.name %>
+          </p>
+        </div>
+        <div class="training__detail">
+          <p class="detail__title">トレーニングの種目</p>
+          <p class="detail__message">
+            <%= @training.event %>
+          </p>
+        </div>
+      </div>
+      <div class="training__comments">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+          <%# <%= form_with local: true do |f|%>
+            <div class="field">
+              <%# <%= f.label :hoge, "コメント" %><br />
+              <%# <%= f.text_field :hoge %>
+            </div>
+            <div class="actions">
+              <%# <%= f.submit "送信する", class: :form__btn  %>
+            </div>
+          <%# <% end %> 
+        <%# // ログインしているユーザーには上記を表示する %>
+        <ul class="comments_lists">
+          <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+            <li class="comments_list">
+              <%# <%= " コメントのテキスト "%>
+              <%# <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
+            </li>
+          <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>

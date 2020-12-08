@@ -16,13 +16,13 @@
 
 ## trainings テーブル
 
-| Column      | Type       | Options                 |
-| ----------- | ---------- | ----------------------- |
-| title       | string     | null: false             |
-| time_id     | text       | null: false,ActiveHash  |
-| part_id     | text       | null: false,ActiveHash  |
-| event_id    | text       | null: false,ActiveHash  |
-| user        | references |                         |
+| Column              | Type       | Options                 |
+| ------------------- | ---------- | ----------------------- |
+| title               | string     | null: false             |
+| trainingtime_id     | integer    | null: false,ActiveHash  |
+| part_id             | integer    | null: false,ActiveHash  |
+| event               | string     | null: false             |
+| user                | references |                         |
 
 ### Association
 
