@@ -1,5 +1,6 @@
 class TrainingsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_training, only: [:show, :edit, :update, :destroy]
 
   def index
     @trainings = Training.all
@@ -19,18 +20,15 @@ class TrainingsController < ApplicationController
   end
 
   def show
-    @training = Training.find(params[:id])
   end
 
   def edit
-    @training = Training.find(params[:id])
     unless current_user == @training.user
       redirect_to action: :index
     end
   end
 
   def update
-    @training = Training.find(params[:id])
     if @training.update(training_params)
       redirect_to action: :show
     else
@@ -39,13 +37,17 @@ class TrainingsController < ApplicationController
   end
 
   def destroy
-    @training = Training.find(params[:id])
     @training.destroy
     redirect_to root_path
   end
 
   private
+
   def training_params
     params.require(:training).permit(:title, :trainingtime_id, :part_id, :event).merge(user_id: current_user.id)
+  end
+
+  def set_training
+    @training = Training.find(params[:id])
   end
 end
