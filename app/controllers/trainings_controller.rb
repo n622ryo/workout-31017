@@ -20,6 +20,8 @@ class TrainingsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @training.comments
   end
 
   def edit
