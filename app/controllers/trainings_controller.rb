@@ -38,6 +38,12 @@ class TrainingsController < ApplicationController
     end
   end
 
+  def destroy
+    @training = Training.find(params[:id])
+    @training.destroy
+    redirect_to root_path
+  end
+
   private
   def training_params
     params.require(:training).permit(:title, :trainingtime_id, :part_id, :event).merge(user_id: current_user.id)
