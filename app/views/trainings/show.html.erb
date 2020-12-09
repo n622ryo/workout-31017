@@ -14,7 +14,7 @@
       <% if user_signed_in? && current_user.id == @training.user_id %>
         <div class="training__manage">
           <%= link_to "編集する", edit_training_path, class: :training__btn %>
-          <%= link_to "削除する", root_path, class: :training__btn %>
+          <%= link_to "削除する", training_path(@training.id), method: :delete, class: :training__btn %>
         </div>
       <% end %>
       <div class="training__body">
