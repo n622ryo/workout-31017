@@ -1,7 +1,7 @@
 class Training < ApplicationRecord
     #userとのアソシエーション
   belongs_to :user
-
+  has_many :comments
     #ActiveHashとのアソシエーション
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to :trainingtime
