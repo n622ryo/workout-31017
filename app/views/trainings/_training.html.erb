@@ -15,6 +15,6 @@
       <%= training.event %>
     </p>
       <%# //ユーザー名 %>
-    <%= link_to "by #{training.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{training.user.name}", training_path(training.id), class: :card__user %>
   </div>
 </div>
