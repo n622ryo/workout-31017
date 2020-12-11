@@ -1,4 +1,6 @@
 <%= form_with(model: @training, local: true) do |f|%>
+  <%= render 'devise/shared/error_messages', model: f.object %>
+
   <div class="field">
     <%= f.label :title, "トレーニングの目的" %><br />
     <%= f.text_area :title, placeholder:"例）腕を太くしたい！", class: :form__text %>
