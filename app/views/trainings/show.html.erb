@@ -9,7 +9,6 @@
           </p>
         </div>
       </p>
-      <%# //ユーザー名 %>
       <%= link_to @training.user.name, user_path(@training.user_id), class: :training__user %>
       <% if user_signed_in? && current_user.id == @training.user_id %>
         <div class="training__manage">
