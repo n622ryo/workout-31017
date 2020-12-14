@@ -3,10 +3,6 @@
     <%# //トレーニングの目的 %>
     <%= link_to training.title, training_path(training.id), class: :card__title%>
     <p class="card__summary">
-      <%# //トレーニングの合計時間 %>
-      <%= training.trainingtime.name %>
-    </p>
-    <p class="card__summary">
       <%# //トレーニングの部位 %>
       <%= training.part.name %>
     </p>
