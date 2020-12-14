@@ -152,6 +152,7 @@ a {
 }
 .card__body {
   border: 1px black solid;
+  border-radius: 2%;
   padding: 3px;
 }
 .card__img {
