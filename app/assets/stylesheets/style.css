@@ -55,11 +55,11 @@ a {
 .logo {
   width: 200px;
   font-size: 25px;
+  margin-right: 50px;
 }
 .logo:hover{
   color: #fff;
 }
-
 .nav__btn__in{
   display: inline-block;
   padding: 0.4em 1.6em;
