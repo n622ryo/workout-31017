@@ -20,6 +20,7 @@
   text-align: center;
   padding: 10px;
   margin-top: -48px;
+  margin-bottom: 10px;
 }
 .alert-danger {
   background-color: rgb(246, 133,77);
