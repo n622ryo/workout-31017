@@ -26,11 +26,24 @@
             <div class="nav__right">
               <%= link_to "ログイン", new_user_session_path, class: :nav__btn__in %>
               <%= link_to "新規登録", new_user_registration_path, class: :nav__btn__in %>
+              <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: :nav__btn__in %>
             </div>
           <% end %>
         </div>
       </div>
     </header>
+      <div class="alert">
+        <% if flash[:notice] %>
+          <div class="alert alert-info">
+            <%= flash[:notice] %>
+          </div>
+        <% end %>
+        <% if flash[:alert] %>
+          <div class="alert alert-danger">
+            <%= flash[:alert] %>
+          </div>
+      <% end %>
+      </div>
     <%= yield %>
     <footer class="footer">
       <p class="copyright">Copyright © WORK OUT All rights reserved.</p>
