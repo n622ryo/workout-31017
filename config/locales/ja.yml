@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       name: ニックネーム
+       target: 目標
+     training:
+       title: 目的
+       trainingtime_id: 合計時間
+       part_id: 部位
+       event: 種目
