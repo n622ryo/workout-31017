@@ -36,12 +36,12 @@ Rails 6.0.0
 
 ## ER図
 ![demo]
+(https://gyazo.com/1ec258981b5524d349104983ef3c7118)
 
 ## 各種機能＆導入技術
 - プラットフォーム（Heroku）
 - データベース（MySQL）
 - テスト（Rspec、Capybara、factory_bot）
-- 自動テスト＆自動デプロイ（Circleci）
 - コードチェック（rubocop）
 - ユーザー登録＆ログイン（devise)
 - エディタ（vsコード）
