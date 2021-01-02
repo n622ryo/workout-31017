@@ -36,7 +36,7 @@ Rails 6.0.0
 
 ## ER図
 ![demo]
-(https://gyazo.com/1ec258981b5524d349104983ef3c7118)
+(https://i.gyazo.com/1ec258981b5524d349104983ef3c7118.png)
 
 ## 各種機能＆導入技術
 - プラットフォーム（Heroku）
