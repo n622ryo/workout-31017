@@ -44,6 +44,7 @@ Rails 6.0.0
 - データベース（MySQL）
 - テスト（Rspec、Capybara、factory_bot）
 - ユーザー登録＆ログイン（devise)
+- コードチェック（rubocop）
 - エディタ（vsコード）
 - アプリケーションメッセージ日本語化(rails-i18n)
 
