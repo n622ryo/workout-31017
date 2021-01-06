@@ -1,6 +1,6 @@
 class Part < ActiveHash::Base
   self.data = [
-    { id: 0, name: '--'},
+    { id: 0, name: '--' },
     { id: 1, name: '胸筋（大胸筋、小胸筋、前鋸筋など）' },
     { id: 2, name: '背筋（広背筋、僧帽筋など）' },
     { id: 3, name: '肩（三角筋など）' },

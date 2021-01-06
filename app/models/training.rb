@@ -1,10 +1,10 @@
 class Training < ApplicationRecord
-  #userとのアソシエーション
+  # userとのアソシエーション
   belongs_to :user
-  #commentsとのアソシエーション
+  # commentsとのアソシエーション
   has_many :comments, dependent: :destroy
 
-  #ActiveHashとのアソシエーション
+  # ActiveHashとのアソシエーション
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :trainingtime
   belongs_to :part

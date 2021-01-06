@@ -1,6 +1,6 @@
 class Trainingtime < ActiveHash::Base
   self.data = [
-    { id: 0, name: '--'},
+    { id: 0, name: '--' },
     { id: 1, name: '10分' },
     { id: 2, name: '20分' },
     { id: 3, name: '30分' },

@@ -25,9 +25,7 @@ class TrainingsController < ApplicationController
   end
 
   def edit
-    unless current_user == @training.user
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless current_user == @training.user
   end
 
   def update
