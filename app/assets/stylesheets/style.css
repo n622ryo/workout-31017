@@ -284,6 +284,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.user__manage{
+  display: flex;
+  font-size: 20px;
+  padding-bottom: 16px;
+}
 /* フッター */
 
 .footer {

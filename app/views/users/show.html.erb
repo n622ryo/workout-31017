@@ -4,6 +4,11 @@
       <h2 class="page-heading">
         <%= "#{@user.name}さんの情報"%>
       </h2>
+      <% if user_signed_in? && current_user.id == @user.id %>
+        <div class="user__manage">
+          <%= link_to "編集する", edit_user_path(@user), class: :training__btn %>
+        </div>
+      <% end %>
       <table class="table">
         <tbody>
           <tr>
@@ -11,7 +16,7 @@
             <td class="table__col2"><%= @user.name %></td>
           </tr>
           <tr>
-            <th class="table__col1">目標</th>
+            <th class="table__col1">最終目標</th>
             <td class="table__col2"><%= @user.target %></td>
           </tr>
         </tbody>
