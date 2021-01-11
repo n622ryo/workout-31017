@@ -15,8 +15,6 @@ class User < ApplicationRecord
   end
 
   with_options presence: true do
-    validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
-    validates :password_confirmation
     validates :name
     validates :target
   end

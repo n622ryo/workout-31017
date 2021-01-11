@@ -3,7 +3,7 @@ FactoryBot.define do
     email                 { 'test@example' }
     password              { '111aaa' }
     password_confirmation { password }
-    name                  { 'ユーザー名' }
+    name                  { 'ニックネーム' }
     target                { '具体的な目標' }
   end
 end
