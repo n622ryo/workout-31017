@@ -3,6 +3,8 @@ class Training < ApplicationRecord
   belongs_to :user
   # commentsとのアソシエーション
   has_many :comments, dependent: :destroy
+  # favoritesとのアソシエーション
+  has_many :favorites
 
   # ActiveHashとのアソシエーション
   extend ActiveHash::Associations::ActiveRecordExtensions
