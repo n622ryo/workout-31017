@@ -21,12 +21,20 @@
           </tr>
         </tbody>
       </table>
+        <hr>
       <h2 class="page-heading">
         <%= "#{@user.name}さんのトレーニング記録"%>
       </h2>
       <div class="user__card">
         <%= render partial: 'trainings/training', collection: @user.trainings %>
       </div>
+        <hr>
+      <h2 class="page-heading">
+        <%= "#{@user.name}さんのお気に入りした投稿"%>
+      </h2>
+      <% @favorite_trainings.each do |training| %>
+        <p><span>投稿内容 : </span><%=link_to training.title, training_path(training.id), class: :card__like %></p>
+      <% end %>
     </div>
   </div>
 </div>
