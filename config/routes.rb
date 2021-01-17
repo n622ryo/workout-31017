@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root to: "trainings#index"
   resources :trainings, only: [:new, :create, :show, :edit, :update, :destroy ] do
     resources :comments, only: :create 
+    resource :favorites, only: [:create, :destroy]
   end
     resources :users, only: [:show, :edit, :update]
 end

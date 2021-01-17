@@ -165,6 +165,9 @@ a {
   font-weight: bold;
   text-decoration: underline;
 }
+.card__title:hover{
+  color: red
+}
 .card__summary {
   font-size: 16px;
 }
@@ -174,6 +177,13 @@ a {
   color: black;
   text-align: right;
   text-decoration: underline;
+}
+.card__like {
+  color: black;
+  text-decoration: underline;
+}
+.card__like:hover{
+  color: red
 }
 
 /* 詳細ページ */

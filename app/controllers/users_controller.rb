@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def show
+    @trainings = @user.trainings
+    @favorite_trainings = @user.favorite_trainings
   end
 
   def edit

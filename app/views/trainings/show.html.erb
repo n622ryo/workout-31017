@@ -1,6 +1,13 @@
 <main class="main">
   <div class="inner">
     <div class="training__wrapper">
+      <%= link_to @training.user.name, user_path(@training.user_id), class: :training__user %>
+      <% if user_signed_in? && current_user.id == @training.user_id %>
+        <div class="training__manage">
+          <%= link_to "編集する", edit_training_path, class: :training__btn %>
+          <%= link_to "削除する", training_path(@training.id), method: :delete, class: :training__btn, data: { confirm: "このデータでよろしいですか？" } %>
+        </div>
+      <% end %>
       <p class="training__hedding">
         <div class="training__detail">
           <p class="detail__title">トレーニングの目的</p>
@@ -9,13 +16,6 @@
           </p>
         </div>
       </p>
-      <%= link_to @training.user.name, user_path(@training.user_id), class: :training__user %>
-      <% if user_signed_in? && current_user.id == @training.user_id %>
-        <div class="training__manage">
-          <%= link_to "編集する", edit_training_path, class: :training__btn %>
-          <%= link_to "削除する", training_path(@training.id), method: :delete, class: :training__btn, data: { confirm: "このデータでよろしいですか？" } %>
-        </div>
-      <% end %>
       <div class="training__body">
         <div class="training__detail">
           <p class="detail__title">トレーニングの合計時間</p>
@@ -36,6 +36,7 @@
           </p>
         </div>
       </div>
+
       <div class="training__comments">
         <% if user_signed_in? %>
           <%= form_with model: [@training, @comment], local: true do |f| %>
