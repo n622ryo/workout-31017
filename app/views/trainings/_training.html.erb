@@ -5,9 +5,9 @@
     <%# //お気に入りボタンの追加%>
     <% if user_signed_in? %>
       <% if training.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
-          <p><span>お気に入り解除: </span><%=link_to training.favorites.count, training_favorites_path(training.id), method: :delete %></p>
+          <p><span>お気に入り解除: </span><%=link_to training.favorites.count, training_favorites_path(training.id), method: :delete, class: :card__like %></p>
       <% else %>
-          <p><span>お気に入り登録: </span><%=link_to training.favorites.count, training_favorites_path(training.id), method: :post %></p>
+          <p><span>お気に入り登録: </span><%=link_to training.favorites.count, training_favorites_path(training.id), method: :post, class: :card__like %></p>
       <% end %>
     <% else %>
         <p><span>お気に入り数: </span><%= training.favorites.count %></p>
