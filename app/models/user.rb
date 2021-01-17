@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :trainings
   has_many :comments
   has_many :favorites
+  has_many :favorite_trainings, through: :favorites, source: :training
+
 
   def self.guest
     find_or_create_by!(email: 'guest@example.com') do |user|
