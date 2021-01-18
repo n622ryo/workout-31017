@@ -63,6 +63,8 @@ Rails 6.0.0
 
 - has_many :trainings
 - has_many :comments
+- has_many :favorites
+
 
 ## trainings テーブル
 
@@ -78,12 +80,26 @@ Rails 6.0.0
 
 - has_many :comments
 - belongs_to :user
+- has_many :favorites
+
 
 ## comments テーブル
 
 | Column    | Type       | Options     |
 | --------- | ---------- | ------------|
 | text      | text       | null: false |
+| user      | references |             |
+| training  | references |             |
+
+### Association
+
+- belongs_to :user
+- belongs_to :training
+
+## favorites テーブル
+
+| Column    | Type       | Options     |
+| --------- | ---------- | ------------|
 | user      | references |             |
 | training  | references |             |
 
