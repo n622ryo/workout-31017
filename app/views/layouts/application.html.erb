@@ -11,42 +11,44 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="inner">
-        <div class="nav">
-          <div class="nav__left">
-            <%= link_to "workout", root_path, class: :logo %>
-          </div>
-          <% if user_signed_in? %>
-            <div class="nav__right">
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn__out %>
-              <%= link_to "トレーニング記録", new_training_path, class: :nav__btn__out %>
+    <div class="footerFixed">
+      <header class="header">
+        <div class="inner">
+          <div class="nav">
+            <div class="nav__left">
+              <%= link_to "workout", root_path, class: :logo %>
             </div>
-          <% else %>
-            <div class="nav__right">
-              <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: :nav__btn__in %>
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn__in %>
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn__in %>
+            <% if user_signed_in? %>
+              <div class="nav__right">
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn__out %>
+                <%= link_to "トレーニング記録", new_training_path, class: :nav__btn__out %>
+              </div>
+            <% else %>
+              <div class="nav__right">
+                <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class: :nav__btn__in %>
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn__in %>
+                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn__in %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </header>
+        <div class="alert">
+          <% if flash[:notice] %>
+            <div class="alert alert-info", id="js-notice">
+              <%= flash[:notice] %>
             </div>
           <% end %>
-        </div>
-      </div>
-    </header>
-      <div class="alert">
-        <% if flash[:notice] %>
-          <div class="alert alert-info", id="js-notice">
-            <%= flash[:notice] %>
-          </div>
+          <% if flash[:alert] %>
+            <div class="alert alert-danger", id="js-notice">
+              <%= flash[:alert] %>
+            </div>
         <% end %>
-        <% if flash[:alert] %>
-          <div class="alert alert-danger", id="js-notice">
-            <%= flash[:alert] %>
-          </div>
-      <% end %>
-      </div>
-    <%= yield %>
-    <footer class="footer">
-      <p class="copyright">Copyright © WORK OUT All rights reserved.</p>
-    </footer>
+        </div>
+      <%= yield %>
+      <footer class="footer">
+        <p class="copyright">Copyright © WORK OUT All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>

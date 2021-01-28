@@ -21,20 +21,46 @@
           </tr>
         </tbody>
       </table>
+
+        <hr>
+        <h2 class="page-heading">
+        <%= "#{@user.name}さんのフォロー、フォロワー情報"%>
+        </h2>
+        <div class="card">
+          <div class="card__body">
+            <div class="user__like">
+              <p><%=link_to "フォローの一覧", follows_user_path(@user.id), class: :user__detail %></p>
+              <p><%=link_to "フォロワーの一覧", followers_user_path(@user.id), class: :user__detail %></p>
+            </div>
+            <% if current_user != @user %>
+              <% if @user.followed_by?(current_user) %>
+                  <p><%=link_to "#{current_user.name}は#{@user.name}さんをフォロー済み", user_relationships_path(@user.id), method: :delete %></p>
+              <% else %>
+                  <p><%=link_to "フォローする", user_relationships_path(@user.id), method: :post %></p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
         <hr>
       <h2 class="page-heading">
         <%= "#{@user.name}さんのトレーニング記録"%>
       </h2>
-      <div class="user__card">
+      <div>
         <%= render partial: 'trainings/training', collection: @user.trainings %>
       </div>
         <hr>
       <h2 class="page-heading">
         <%= "#{@user.name}さんのお気に入りした投稿"%>
       </h2>
-      <% @favorite_trainings.each do |training| %>
-        <p><span>投稿内容 : </span><%=link_to training.title, training_path(training.id), class: :card__like %></p>
-      <% end %>
+        <div class="card">
+          <div class="card__body">
+            <% @favorite_trainings.each do |training| %>
+              <p><span>投稿内容 : </span><%=link_to training.title, training_path(training.id), class: :card__like %></p>
+              <%= link_to "by #{training.user.name}", training_path(training.id), class: :card__user %>
+            <% end %>
+          </div>
+        </div>
     </div>
   </div>
 </div>

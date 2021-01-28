@@ -9,6 +9,14 @@
       <% else %>
           <p><span>お気に入り登録: </span><%=link_to training.favorites.count, training_favorites_path(training.id), method: :post, class: :card__like %></p>
       <% end %>
+    <%# //フォロー済みボタン、フォローするボタンの追加%>
+      <% if current_user != training.user %>
+          <% if training.user.followed_by?(current_user) %>
+              <p><%= link_to "#{current_user.name}は#{training.user.name}さんをフォロー済み", user_relationships_path(training.user.id), method: :delete %></p>
+          <% else %>
+              <p><%= link_to "#{training.user.name}さんをフォローする", user_relationships_path(training.user.id), method: :post %></p>
+          <% end %>
+      <% end %>
     <% else %>
         <p><span>お気に入り数: </span><%= training.favorites.count %></p>
     <% end %>
