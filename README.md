@@ -37,8 +37,7 @@ Rails 6.0.0
 
 ## ER図
 ![demo]
-(https://i.gyazo.com/470e33c6176a095ef5b24f01bf0c856e.png)
-
+(https://i.gyazo.com/30f5af9cd0c7c3f27d23a0b0403f5023.png)
 ## 各種機能＆導入技術
 - プラットフォーム（Heroku）
 - データベース（MySQL）
@@ -64,7 +63,7 @@ Rails 6.0.0
 - has_many :trainings
 - has_many :comments
 - has_many :favorites
-
+- has_many :relationships
 
 ## trainings テーブル
 
@@ -100,10 +99,21 @@ Rails 6.0.0
 
 | Column    | Type       | Options     |
 | --------- | ---------- | ------------|
-| user      | references |             |
-| training  | references |             |
+| user      | integer    |             |
+| training  | integer    |             |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :training
+
+## relationships テーブル
+
+| Column    | Type       | Options     |
+| --------- | ---------- | ------------|
+| user      | integer    |             |
+| training  | integer    |             |
+
+### Association
+
+- belongs_to :user
