@@ -301,7 +301,9 @@ a {
 .user__detail {
   padding-bottom: 10px;
 }
-
+.mail__link{
+  text-decoration: underline;
+}
 /* フッター */
 
 .footerFixed{
