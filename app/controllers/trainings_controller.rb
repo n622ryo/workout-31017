@@ -3,7 +3,7 @@ class TrainingsController < ApplicationController
   before_action :set_training, only: [:show, :edit, :update, :destroy]
 
   def index
-    @trainings = Training.all
+    @trainings = Training.includes(:user).order("created_at DESC")
   end
 
   def new
