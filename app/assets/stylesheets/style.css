@@ -95,8 +95,9 @@ a {
 }
 
 .form__text {
-  width: 70%;
-  padding: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
 }
 
 .field{
@@ -147,7 +148,7 @@ a {
   min-height: calc(100vh - 161px);
 }
 .card {
-  width: calc((100% - 50px) / 2);
+  width: 80%;
   margin-bottom: 10px;
 }
 .card__body {
@@ -337,7 +338,7 @@ a {
     font-size: 24px;
   }
   .card {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -350,7 +351,7 @@ a {
     font-size: 20px;
   }
   .card {
-    width: 60%;
+    width: 100%;
     margin-bottom: 10px;
   }
   .card__title {
