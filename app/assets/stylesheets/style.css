@@ -18,6 +18,7 @@ div {
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: rgba(77, 231, 246, 0.07);
 }
 
 li {
@@ -68,11 +69,11 @@ a {
   border-radius: 50%;
   text-decoration: none;
   user-select: none;
-  border: 2px black solid;
+  border: 2px solid black;
 }
 .nav__btn__in:hover{
   color: #fff;
-  border: 2px #fff solid;
+  border: 2px solid #fff;
 }
 .nav__btn__out{
   display: inline-block;
@@ -82,11 +83,11 @@ a {
   border-radius: 50%;
   text-decoration: none;
   user-select: none;
-  border: 2px black solid;
+  border: 2px solid black;
 }
 .nav__btn__out:hover{
   color: #fff;
-  border: 2px #fff solid;
+  border: 2px solid #fff;
 }
 
 /* フォーム周り */
@@ -95,8 +96,12 @@ a {
 }
 
 .form__text {
-  width: 70%;
-  padding: 5px;
+  width: 100%;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgba(rgb(121, 116, 116), green, blue, alpha);
+  border-radius: 2%;
+
 }
 
 .field{
@@ -136,6 +141,9 @@ a {
 .greeting__link{
   text-decoration: underline;
 }
+.greeting__link:hover{
+  color: red;
+}
 .page-heading {
   font-size: 30px;
   margin-bottom: 15px;
@@ -147,7 +155,7 @@ a {
   min-height: calc(100vh - 161px);
 }
 .card {
-  width: calc((100% - 50px) / 2);
+  width: 80%;
   margin-bottom: 10px;
 }
 .card__body {
@@ -155,6 +163,7 @@ a {
   border-radius: 2%;
   padding: 5px;
   margin: 20px;
+  background-color: #fff;
 }
 .card__img {
   margin-bottom: 16px;
@@ -178,6 +187,9 @@ a {
   color: black;
   text-align: right;
   text-decoration: underline;
+}
+.card__user:hover {
+  color: red;
 }
 .card__like {
   color: black;
@@ -204,11 +216,15 @@ a {
   text-align: center;
   text-decoration: underline;
 }
+.training__user:hover{
+  color: red;
+}
 .training__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 20px;
+  background-color: #fff;
+  padding: 10px;
 }
 .detail__title{
   font-size: 20px;
@@ -230,21 +246,22 @@ a {
 .training__btn{
   display: block;
   padding: 0.4em 1.6em;
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: black;
+  background-color: #fff;
   text-decoration: none;
   user-select: none;
-  border: 1px black solid;
+  border: 1px solid black;
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
 }
 .training__btn:hover{
-  background: rgba(231, 229, 229, 0.986);
+  background: rgba(251, 5, 5, 0.47);
 }
 
 .training__comments{
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -260,6 +277,7 @@ a {
 
 .comment_user{
   font-size: 16px;
+  padding-left: 15px;
   color: #999;
   text-decoration: underline;
 }
@@ -278,13 +296,14 @@ a {
   font-weight: bold;
   background: #fafafa;
   border-collapse: collapse;
-  border: 1px solid #f5f5f5;
+  border: 1px solid black;
   width: 30%;
   padding: 8px;
 }
 .table__col2{
   text-align: left;
-  border: 1px solid #f5f5f5;
+  background: #fafafa;
+  border: 1px solid black;
   border-collapse: collapse;
   width: 70%;
   padding: 16px 8px;
@@ -301,8 +320,14 @@ a {
 .user__detail {
   padding-bottom: 10px;
 }
+.user__detail:hover{
+  color: red;
+}
 .mail__link{
   text-decoration: underline;
+}
+.mail__link:hover{
+  color: red;
 }
 /* フッター */
 
@@ -337,7 +362,7 @@ a {
     font-size: 24px;
   }
   .card {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -350,7 +375,7 @@ a {
     font-size: 20px;
   }
   .card {
-    width: 60%;
+    width: 100%;
     margin-bottom: 10px;
   }
   .card__title {
