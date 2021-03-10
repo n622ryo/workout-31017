@@ -18,6 +18,9 @@
             <div class="nav__left">
               <%= link_to "workout", root_path, class: :logo %>
             </div>
+            <div class="timer">
+              <%= link_to "タイマー機能", page_path('about') %>
+            </div>
             <% if user_signed_in? %>
               <div class="nav__right">
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__btn__out %>
