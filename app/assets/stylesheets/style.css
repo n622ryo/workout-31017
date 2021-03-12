@@ -307,6 +307,26 @@ a {
   color: red
 }
 
+/* タイマーページ */
+.time {
+  text-align: center;
+}
+#timer {
+  font-size: 70px;
+}
+.timer_count{
+  padding: 10px;
+}
+#startbutton {
+  font-size: 20px;
+}
+#stopbutton {
+  font-size: 20px;
+}
+#resetbutton {
+  font-size: 20px;
+}
+
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 161px);
