@@ -220,10 +220,10 @@ a {
   background: rgba(97, 232, 233, 0.73);
   text-align: center;
   border-radius: 4%;
-  bottom: 50px;
-  right: 50px;
+  bottom: 40px;
+  right: 40px;
   position: fixed;
-  padding: 15px;
+  padding: 8px;
   box-shadow: 4px 4px 0 0 rgb(25, 24, 24);
   transition: 2s;
 }
