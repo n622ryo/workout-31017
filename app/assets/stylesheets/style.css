@@ -216,6 +216,24 @@ a {
 .card__like:hover{
   color: red
 }
+.timer {
+  background: rgb(97 232 233 / 73%);
+  text-align: center;
+  border-radius: 4%;
+  bottom: 50px;
+  right: 50px;
+  position: fixed;
+  padding: 15px;
+  box-shadow: 4px 4px 0 0 rgb(25, 24, 24);
+  transition: 2s;
+}
+
+.timer:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+  background-color: rgba(233, 97, 97, 0.726);
+  color: navy;
+}
 
 /* 詳細ページ */
 .training__wrapper{
