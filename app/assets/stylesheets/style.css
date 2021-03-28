@@ -217,7 +217,7 @@ a {
   color: red
 }
 .timer {
-  background: rgb(97 232 233 / 73%);
+  background: rgba(97, 232, 233, 0.73);
   text-align: center;
   border-radius: 4%;
   bottom: 50px;
